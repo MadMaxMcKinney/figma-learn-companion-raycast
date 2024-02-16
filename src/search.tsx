@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ActionPanel, Action, Icon, List } from "@raycast/api";
 import { Topic } from "./types";
 import useHelpCenter from "./hooks/useHelpCenter";
+import { FigmaColors } from "./util";
 
 const featuredTopics: Topic[] = [
     {
@@ -63,7 +64,7 @@ export default function Command() {
                                 key={topic.title}
                                 accessories={[
                                     {
-                                        tag: topic.category,
+                                        tag: { value: topic.category, color: FigmaColors.Purple },
                                         icon: Icon.Tag,
                                     },
                                 ]}
@@ -104,7 +105,7 @@ export default function Command() {
                             key={index}
                             accessories={[
                                 {
-                                    tag: topic.category,
+                                    tag: { value: topic.category, color: FigmaColors.Purple },
                                     icon: Icon.Tag,
                                 },
                             ]}
