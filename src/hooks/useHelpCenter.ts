@@ -16,7 +16,7 @@ export default function () {
 
         // Fetch the search results from the Figma help center
         try {
-            data = await axios(`https://help.figma.com/hc/en-us/search?query=${searchText}`, {});
+            data = await axios(`https://api.maxmckinney.com/api/figma/hc?search=${searchText}`, {});
         } catch (error) {
             showToast(Toast.Style.Failure, "Error", "Couldn't fetch the help center");
             console.error(error);
