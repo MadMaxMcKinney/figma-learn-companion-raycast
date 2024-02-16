@@ -18,7 +18,7 @@
         },
         {
             "name": "updates",
-            "title": "View updates",
+            "title": "View Updates",
             "description": "View all the Figma product ecosystem updates",
             "mode": "view"
         }
